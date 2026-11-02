@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IFEOLUWA | Luxury Bubu Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="logo">IFEOLUWA</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#custom">Custom Orders</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="cart-button" onclick="showCart()">
+            Bag (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="subtitle">THE ART OF AFRICAN ELEGANCE</p>
+
+            <h1>Elegance in<br>Every Thread.</h1>
+
+            <p>
+                Discover beautifully crafted Bubu outfits
+                designed for comfort, confidence and elegance.
+            </p>
+
+            <a href="#shop" class="main-button">
+                EXPLORE COLLECTION
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTION -->
+    <section class="collection" id="shop">
+
+        <p class="subtitle">DISCOVER YOUR STYLE</p>
+
+        <h2>Our Collection</h2>
+
+        <div class="products" id="products"></div>
+
+    </section>
+
+
+    <!-- CUSTOM ORDER -->
+    <section class="custom" id="custom">
+
+        <p class="subtitle">MADE ESPECIALLY FOR YOU.</p>
+
+        <h2>Your Style, Your Measurements.</h2>
+
+        <p>
+            Request a personalised Bubu outfit
+            designed around your preferences.
+        </p>
+
+        <form id="custom-form">
+
+            <input type="text" id="customer-name"
+                placeholder="receiver-name" required>
+
+            <input type="tel" id="customer-phone"
+                placeholder="08064141565
+                " required>
+
+            <select id="customer-style" required>
+                <option value="">Choose your preferred style</option>
+                <option>Classic Bubu</option>
+                <option>Luxury Bubu</option>
+                <option>Embroidered Bubu</option>
+                <option>Other custom design</option>
+            </select>
+
+            <textarea id="customer-details"
+                placeholder="Describe your preferred colour, fabric and measurements"
+                required></textarea>
+
+            <button type="submit" class="main-button">
+                REQUEST CUSTOM ORDER
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2>Our Story</h2>
+
+        <p>
+            At Ifeoluwa Bubu Collection, we believe elegance should feel effortless.
+            Our Bubu designs celebrate African fashion,
+            creativity and timeless beauty.
+            
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>IFEOLUWA</h2>
+
+        <p>Elegance. Comfort. Confidence.</p>
+
+        <p>© 2026 IFEOLUWA BUBU COLLECTION. All rights reserved.</p>
+    </footer>
+
+
+    <!-- CART -->
+    <div id="cart-modal" class="modal">
+
+        <div class="cart-content">
+
+            <button class="close" onclick="closeCart()">×</button>
+
+            <h2>Your Shopping Bag</h2>
+
+            <div id="cart-items"></div>
+
+            <h3 id="cart-total">Total: ₦50,000</h3>
+
+            <button onclick="checkout()" class="main-button">
+                ORDER ON WHATSAPP
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
